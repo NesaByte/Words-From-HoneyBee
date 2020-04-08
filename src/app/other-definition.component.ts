@@ -19,7 +19,7 @@ class FormAddDefinition{
 })
 export class OtherDefinitionComponent implements OnInit {
   // Initialization 
-  term : FormAddTerm;
+ /* term : FormAddTerm;
   termResult: FormAddTermResponse;
   def : FormAddDef;
   defResult: FormAddDefResponse;
@@ -28,18 +28,18 @@ export class OtherDefinitionComponent implements OnInit {
   numHelpNes : number;
   numHelpNo : number;
 
-  formError: string;
+  formError: string;*/
 
   constructor(private m: DataManagerService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInit() {/*
     this.id = this.route.snapshot.paramMap.get("id");
     this.m.englishTermGetById(this.id).subscribe(response => this.termResult = response);
     this.def = new FormAddDef();
     this.numHelpNes = this.termResult.helpYes;
-    this.numHelpNo = this.termResult.helpNo;
+    this.numHelpNo = this.termResult.helpNo;*/
   }
-  
+  /*
 
   // Actions
 
@@ -73,5 +73,5 @@ export class OtherDefinitionComponent implements OnInit {
 
   helpno() {
 
-  }
+  }*/
 }

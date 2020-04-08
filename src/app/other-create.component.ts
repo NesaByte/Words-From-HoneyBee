@@ -23,7 +23,7 @@ export class OtherCreateComponent implements OnInit {
   // Properties
 
   // Data that will be sent to and submitted from the form
-  
+  /*
   term: FormAddTerm;
   termResult: FormAddTermResponse;
   def: FormAddDef;
@@ -31,16 +31,16 @@ export class OtherCreateComponent implements OnInit {
 
   // Displays error text beside the buttons
   formError: string;
-
+*/
   // Initialization
 
   constructor(private m: DataManagerService, private router: ActivatedRoute) { }
 
   ngOnInit() {
     // Initialize the object that will be sent to the form
-    this.term = new FormAddTerm();
+    /*this.term = new FormAddTerm();
     this.termResult = new FormAddTermResponse();
-    this.def = new FormAddDef();
+    this.def = new FormAddDef();*/
   }
 /*
   // Actions
