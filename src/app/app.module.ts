@@ -17,7 +17,9 @@ import { TermDetailComponent } from './term-detail.component';
 import { TermCreateComponent } from './term-create.component';
 import { TermDefinitionComponent } from './term-definition.component';
 
-import { OtherCreateComponent } from './other-create.component';
+//import { OtherCreateComponent } from './other-create.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,7 @@ import { OtherCreateComponent } from './other-create.component';
     TermCreateComponent,
     TermDefinitionComponent,
 
-    OtherCreateComponent
+    //OtherCreateComponent
 
   ],
   imports: [
