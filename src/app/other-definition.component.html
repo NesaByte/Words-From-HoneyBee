@@ -1,0 +1,45 @@
+<h3>Add another definition to <span>{{ term.wordEnglish }}</span></h3>
+<p>&nbsp;</p>
+<div class="row">
+    <div class="col-md-10 col-sm-10">
+
+        <dt>New Definition:</dt>
+        <dd>Enter data, and click/tap the Save button</dd>
+        <br>
+
+        <div class="form-group">
+            <label class="control-label" for="authorName">Author Name:</label>
+            <input class="form-control" id="authorName" maxlength="100" minlength="3" name="authorName" [(ngModel)]="term.authorName" required autofocus>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="definition">Definition:</label>
+            <input class="form-control input-lg" id="definition"  maxlength="5000" minlength="20" name="definition" [(ngModel)]="term.definition" required>
+        </div>
+
+        <button>Save</button>
+        <a routerLink="/terms/detail/{{ term._id }}" class="btn btn-default">Cancel</a>&nbsp;
+        
+        <br> <br>
+        <dt>Existing Definitions ({{term.definitions.length}})</dt>
+        <br>
+
+        <div *ngFor="let d of term.definitions">
+            <div class= "panel panel-default"> 
+                <div class = "panel-heading">
+                    <button class="btn btn-default btn-sm"> Like&nbsp;&nbsp; <span class="badge">{{ d.likes }}</span></button>
+                    &nbsp;&nbsp;Author: {{ d.authorName }} on {{ d.dateCreated }}
+                </div>
+                <div class = "panel-body">
+                    {{ d.definition }}
+                </div>
+            </div>
+        </div>
+
+        <dt>Field of Study</dt>
+        <dd>{{term.fieldOfStudy}}</dd>
+
+        <br>
+
+        <a routerLink="/terms" class="btn btn-default">Back to list</a>&nbsp;
+</div>
+</div>

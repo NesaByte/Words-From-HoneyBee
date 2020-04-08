@@ -1,0 +1,65 @@
+
+
+<h3>English term detail - <span>{{term.wordEnglish}}</span></h3>
+<p>&nbsp;</p>
+<div class="row">
+    <div class="col-md-10 col-sm-10">
+      <dl class="dl-horizontal">
+        <dt>Number of Definitions: </dt>
+        
+        <dd>{{term.definitions.length}}</dd>
+        <br> <br>
+        <a routerLink="/terms/definition/{{term._id}}" class="btn btn-warning">Add another definition</a>&nbsp;
+  
+        <br>
+        <br>
+            <div *ngFor="let de of term.definitions">
+                <div class= "panel panel-default"> 
+                    <div class = "panel-heading">
+                        <button (click)="onClickLike()" class="btn btn-default btn-sm" > Like&nbsp;&nbsp; 
+                            <span class="badge">{{de.likes}}</span>
+                        </button>
+                        &nbsp;&nbsp;Author: {{de.authorName}} on {{de.dateCreated}}
+                    </div>
+                    <div class = "panel-body">
+                        Definitions: {{ de.definition }}
+                    </div>
+                </div>
+                
+            </div>
+       
+            <dt>Field of Study</dt>
+            <dd>{{term.fieldOfStudy}}</dd>
+            
+            <dt>Author Name</dt>
+            <dd>{{term.authorName}}</dd>
+            
+            <dt>Dates</dt>
+            <dd>Created {{term.dateCreated}} <br> Revised {{term.dateRevised}}</dd>
+            
+            <dt>Translations</dt>
+            <dd>
+                <a routerLink="/others/create" class="btn btn-default">Add Translations</a>&nbsp;
+    
+            </dd>
+
+            <dt>Links</dt>
+            <dd><button><p><span> <a href="https://en.wikipedia.org/wiki/{{ term.wordEnglish }}">Wikipedia</a></span></p></button></dd>
+            <dd><button><p><span> <a href="https://www.youtube.com/{{ term.wordEnglish }}">Youtube</a></span></p></button></dd>
+
+            <dt>Was this helpful?</dt>
+            <dd>
+                <button (click)="onClickYes()">Yes  <span class="badge">{{term.helpYes}}</span></button> 
+                <button (click)="onClickNo()">No <span class="badge">{{term.helpNo}}</span></button></dd>
+
+
+      </dl>
+<hr>
+    <a routerLink="/terms" class="btn btn-default">Back to list</a>&nbsp;
+    </div>
+   
+  </div>
+
+
+
+

@@ -1,0 +1,40 @@
+<h3>List of English Terms</h3>
+<br>
+<input type="search" autofocus class="form-control" placeholder="(3 or more characters)">
+<br>
+<p><a class='btn btn-default' routerLink='/terms/create'>Add new Term</a></p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Author</th>
+      <th>Definition</th>
+      <th>Field of Study</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let te of terms">
+      <td class= "col-md-1">{{ te.wordEnglish }}</td>
+      <td class= "col-md-2">{{ te.authorName }}</td>
+      <td> <!--p *ngFor="let de of te.definitions"-->
+        <span>{{ te.definitions[0].definition }}</span>
+        <br>
+        <i *ngIf="te.definitions.length > 1 ">{{te.definitions.length}} other definition(s)</i>
+      </td>
+      <td class= "col-md-2">{{ te.fieldOfStudy }}</td>
+      
+      
+      <td class= "col-md-1">
+       
+        <a routerLink="/terms/detail/{{ te._id }}" class="btn btn-default">Detail</a>&nbsp;
+        
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="!terms">
+    <p>Requested term was not found</p>
+    <p><a routerLink="/terms" class="btn btn-default">Back to list</a></p>
+  </div>
