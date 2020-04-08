@@ -11,7 +11,7 @@ import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
 import { ContactComponent } from './contact.component';
 
-/*        TERM          */
+/*        TERM          
 import { TermListComponent } from './term-list.component';
 import { TermDetailComponent } from './term-detail.component';
 import { TermCreateComponent } from './term-create.component';
@@ -19,7 +19,7 @@ import { TermDefinitionComponent } from './term-definition.component';
 
 import { OtherCreateComponent } from './other-create.component';
 
-
+*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +29,14 @@ import { OtherCreateComponent } from './other-create.component';
     AboutComponent,
     ContactComponent,
 
-    /*        TERM          */
+    /*        TERM          
     TermListComponent,
     TermDetailComponent,
     TermCreateComponent,
     TermDefinitionComponent,
 
     OtherCreateComponent
-
+*/
   ],
   imports: [
     BrowserModule,
