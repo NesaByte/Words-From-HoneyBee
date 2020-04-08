@@ -13,9 +13,9 @@ import { ContactComponent } from './contact.component';
 
 /*        TERM          */
 import { TermListComponent } from './term-list.component';
-import { TermDetailComponent } from './term-detail.component';
+/*import { TermDetailComponent } from './term-detail.component';
 import { TermCreateComponent } from './term-create.component';
-import { TermDefinitionComponent } from './term-definition.component';
+import { TermDefinitionComponent } from './term-definition.component';*/
 
 //import { OtherCreateComponent } from './other-create.component';
 
@@ -30,10 +30,10 @@ import { TermDefinitionComponent } from './term-definition.component';
     ContactComponent,
 
     /*        TERM          */
-    TermListComponent,
+    TermListComponent,/*
     TermDetailComponent,
     TermCreateComponent,
-    TermDefinitionComponent,
+    TermDefinitionComponent,*/
 
     //OtherCreateComponent
 

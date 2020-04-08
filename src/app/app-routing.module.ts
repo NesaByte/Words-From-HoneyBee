@@ -7,9 +7,9 @@ import { ContactComponent } from "./contact.component";
 
   /*        TERM          */
   import { TermListComponent } from './term-list.component';
-  import { TermDetailComponent } from './term-detail.component';
+  /*import { TermDetailComponent } from './term-detail.component';
   import { TermCreateComponent } from './term-create.component';
-  import { TermDefinitionComponent } from './term-definition.component';
+  import { TermDefinitionComponent } from './term-definition.component';*/
 
   /*        OTHER          
   import { OtherCreateComponent } from './other-create.component';
@@ -21,9 +21,9 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
  /*        TERM          */
     { path: 'terms', component: TermListComponent } , 
-    { path: 'terms/detail/:id', component: TermDetailComponent },
+    /*{ path: 'terms/detail/:id', component: TermDetailComponent },
     { path: 'terms/create', component: TermCreateComponent },
-  { path: 'terms/definition/:id', component: TermDefinitionComponent },
+  { path: 'terms/definition/:id', component: TermDefinitionComponent },*/
 
 /*        OTHER          
 { path: 'others/create', component: OtherCreateComponent },
