@@ -6,7 +6,6 @@ import { FormsModule } from "@angular/forms";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav.component';
-import { NotFoundComponent } from './not-found.component';
 import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
 import { ContactComponent } from './contact.component';
@@ -25,7 +24,6 @@ import { OtherCreateComponent } from './other-create.component';
   declarations: [
     AppComponent,
     NavComponent,
-    NotFoundComponent,
     HomeComponent,
     AboutComponent,
     ContactComponent,
