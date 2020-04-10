@@ -6,7 +6,7 @@ export class EnglishTerm {
     let date = new Date();
     this.dateCreated = date.toString();
   }
-
+  _id: string;
   wordEnglish: string;
   wordNonEnglish: string;
   wordExpanded: string;
