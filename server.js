@@ -1,14 +1,21 @@
-//Install express server
-const express = require("express");
-const path = require("path");
+var express = require("express");
+var app = express();
+var HTTP_PORT = process.env.PORT || 8080
 
-const app = express();
+// Setup static content folder
+app.use(express.static("public"));
 
-app.use(express.static(__dirname ));
-
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname + "src/index.html"));
+// This handles a situation where the requestor sends
+// a URL for a specific resource within the app
+// The resource will not exist here at the server,
+// because it exists only in the client device AFTER
+// the Angular app is loaded
+// So... handle all requests for anything other than the root
+app.get('*', function (req, res) {
+  console.log('Redirect was triggered');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
-
-app.listen(process.env.PORT || 4000);
+app.listen(HTTP_PORT, () => {
+    console.log("Ready to handle requests on port " + HTTP_PORT);
+});
