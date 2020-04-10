@@ -30,7 +30,7 @@ const routes: Routes = [
 
 
   // more routes are added here
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+ // { path: '', redirectTo: '/home', pathMatch: 'full' },
 
    
 
